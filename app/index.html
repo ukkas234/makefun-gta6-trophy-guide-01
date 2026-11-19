@@ -3,23 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Trophy Guide — GTA VI: all 55 trophies, roadmap &amp; tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PS5: official names, descriptions and grades, a cited guide for every trophy, a roadmap to the platinum, missable flags, and a checklist that saves in your browser.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="hero">
+  <div>
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every one of the 55 trophies — official name, description and grade, a guide in our own words with its sources named beside it, a roadmap to the platinum, and a checklist that saves in your browser. No account, no network: this page works with the network off.</p>
+  </div>
+  <div class="platinum-card" id="platinumCard">
+    <p class="platinum-label">Platinum</p>
+    <p class="platinum-name">Vice Got a Price!</p>
+    <p class="platinum-desc">Congratulations! You're a Leonida Legend.</p>
+    <p class="platinum-progress" id="platinumProgress">0 of 54 other trophies</p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<section class="facts" id="facts" aria-label="Trophy list facts"></section>
+
+<section class="progress-wrap" aria-label="Progress">
+  <div class="progress-head">
+    <h2>Your progress</h2>
+    <p id="progressText">0 of 55 earned · 0%</p>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <p class="progress-breakdown" id="progressBreakdown"></p>
+  <div class="progress-actions">
+    <button id="exportBtn" type="button">Export progress (.json)</button>
+    <label class="import-btn">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+    <button id="sampleBtn" type="button">Try sample progress</button>
+    <button id="resetBtn" type="button">Reset all</button>
+  </div>
+  <p class="progress-note" id="saveNote">Progress saves automatically in this browser (localStorage). Export keeps a copy as a file; import restores it.</p>
+</section>
+
+<section class="roadmap" id="roadmapSection" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="roadmap-intro">About 200 hours, difficulty 4/10, one playthrough, all single-player — PowerPyx. Follow the stages in order; every trophy in a stage is listed under it.</p>
+  <div class="missable-banner" id="missableBanner">
+    <strong>Only 1 possibly missable trophy:</strong> Positive Mental Attitude — meditate with Lucia on the balcony at Jason's house in Chapter 1 (morning after Down to Earth). It is unconfirmed whether the trophy needs it; do it when it comes up and the risk is gone. Sources: PowerPyx roadmap, SixShore.
+  </div>
+  <ol class="stages" id="stages"></ol>
+</section>
+
+<section class="tracker" aria-label="Trophy tracker">
+  <h2>Trophy checklist</h2>
+  <div class="controls">
+    <label class="search-label">Search <input id="searchInput" type="search" placeholder="Name, mission or keyword…" autocomplete="off"></label>
+    <fieldset class="kind-filters" id="kindFilters">
+      <legend>Kind</legend>
+      <button type="button" data-kind="all" class="active">All 55</button>
+      <button type="button" data-kind="story">Story</button>
+      <button type="button" data-kind="missable">Missable</button>
+      <button type="button" data-kind="collectible">Collectibles</button>
+      <button type="button" data-kind="activity">Activities</button>
+      <button type="button" data-kind="online">Online</button>
+    </fieldset>
+    <label>Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check-label"><input id="earnedOnly" type="checkbox"> Earned only</label>
+    <label class="check-label spoiler-label"><input id="spoilerToggle" type="checkbox" checked> Hide spoilers (hidden trophies)</label>
+  </div>
+  <p class="count-line" id="countLine"></p>
+  <p class="online-note" id="onlineNote" hidden>There are no online trophies in GTA VI — all 55 unlock in single-player. Source: PowerPyx roadmap (Online Trophies: 0).</p>
+  <ul class="trophy-list" id="trophyList"></ul>
+  <p class="empty-note" id="emptyNote" hidden>No trophies match these filters.</p>
+</section>
+
+<section class="sources-note" aria-label="Sources and method">
+  <h2>Sources &amp; method</h2>
+  <p>Official trophy names, descriptions and grades are shown exactly as PlayStation publishes them, as tracked by Exophase and PSNProfiles (55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze, 28 hidden). Every guide is written in our own words for this guide and cites its sources beside it — a location or step with no source earns no credit, so none is given without one. Where the method was still unconfirmed at launch (18–19 Nov 2026), the guide says so instead of guessing. Launch-era facts come from PowerPyx's GTA 6 Trophy Guide &amp; Roadmap, cross-checked against GTABase, SixShore, WikiGTAVI and OutputLag. No Rockstar logo, artwork, box art or game screenshot is used: the look is our own.</p>
+  <ul class="source-links">
+    <li><a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a></li>
+    <li><a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase — Grand Theft Auto VI Trophies (PS5)</a></li>
+    <li><a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Trophy &amp; Achievement List</a></li>
+    <li><a href="https://sixshore.com/gta-6/guides/trophies-and-achievements/">SixShore — GTA 6 Trophy and Achievement List</a></li>
+    <li><a href="https://www.wikigtavi.com/achievements">WikiGTAVI — GTA 6 Trophies &amp; Achievements</a></li>
+    <li><a href="https://outputlag.com/guides/gta-6-trophy-list/">OutputLag — GTA 6 Trophy List</a></li>
+  </ul>
+  <p class="fine-print">Grand Theft Auto and GTA are trademarks of Take-Two Interactive. This is an unofficial fan-made guide, not affiliated with Rockstar Games. Trophy data checked 19 Nov 2026.</p>
+</section>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>

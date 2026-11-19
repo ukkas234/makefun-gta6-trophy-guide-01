@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-cover.jpg","note":"Trophy checklist with filters, grades and earned ticks; spoilers off; sample progress of 12 trophies","path":"/?sample=1","viewport":{"height":800,"width":1280}},{"file":"2-guide.jpg","note":"Trophy detail open: Positive Mental Attitude, the possibly missable trophy, with steps and cited sources","path":"/?sample=1#trophy-28","viewport":{"height":800,"width":1280}},{"file":"3-roadmap.jpg","note":"Roadmap to the platinum: missable banner plus stages 1-3 with per-stage earned counts","path":"/?sample=1","scroll":1400,"viewport":{"height":800,"width":1280}},{"file":"4-spoiler.jpg","note":"Spoiler setting on: hidden trophies not yet earned are masked in the checklist","path":"/?sample=1","viewport":{"height":800,"width":1280}}]
